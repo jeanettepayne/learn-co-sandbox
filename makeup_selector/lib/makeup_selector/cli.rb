@@ -16,7 +16,6 @@ module MakeupSelector
       get_user_category
       get_description
       restart_or_exit
-
     end 
     goodbye
   end
@@ -81,7 +80,7 @@ module MakeupSelector
     end
     
     def restart_or_exit
-      puts "Would you like to search for another product? Enter 'exit' to leave program, or hit any key to search again".magenta
+      puts "Would you like to search for another product? Enter 'exit' to leave program, or hit any key + enter to search again".magenta
       @input = gets.strip
     end
    
