@@ -30,9 +30,10 @@ module MakeupSelector
   def category_list
     puts "Please enter a number to select a product type:".magenta
   
-    @category_list = @categories.uniq!.each.with_index(1) do |category, index|
+    @category_list = @categories.uniq!.sort.each.with_index(1) do |category, index|
       puts "#{index}. #{category.split("_").join(" ").capitalize}"
     end
+    
   end
 
   def get_user_category
